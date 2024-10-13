@@ -13,10 +13,12 @@ import { Skyscraper } from "./Skyscraper";
 import { mapAtom, roomIDAtom, roomsAtom, socket } from "./SocketManager";
 import { Tablet } from "./Tablet";
 import { avatarUrlAtom } from "./UI";
+import { useNavigate } from "react-router-dom";
 
 let firstLoad = true;
 
 export const Lobby = () => {
+  const navigate = useNavigate();
   const [rooms] = useAtom(roomsAtom);
   const [avatarUrl] = useAtom(avatarUrlAtom);
   const [_roomID, setRoomID] = useAtom(roomIDAtom);
@@ -68,7 +70,6 @@ export const Lobby = () => {
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent); // Safari fix
 
   return (
-    
     <group position-y={-1.5}>
       <motion.group
         ref={tablet}
@@ -182,6 +183,32 @@ export const Lobby = () => {
                   ))}
             </div>
           </div>
+          <div className="absolute -left-full top-1/2 transform -translate-y-1/2 flex flex-col space-y-4">
+            <button
+              className="bg-[#FE8C8C] p-3 rounded-md font-semibold text-lg"
+              onClick={() => navigate("/selectmap")} // Navigate to Select Map
+            >
+              SHOP
+            </button>
+            <button
+              className="bg-[#FE8C8C] p-3 rounded-md font-semibold text-lg"
+              onClick={() => navigate("/marketplace")} // Navigate to Marketplace
+            >
+              MARKET PLACE
+            </button>
+            <button
+              className="bg-[#FE8C8C] p-3 rounded-md font-semibold text-lg"
+              onClick={() => navigate("/settings")} // Navigate to Settings
+            >
+              SETTINGS
+            </button>
+            <button
+              className="bg-[#FE8C8C] p-3 rounded-md font-semibold text-lg"
+              onClick={() => navigate("/")} // Exit or navigate to home
+            >
+              EXIT
+            </button>
+          </div>
         </Html>
       </motion.group>
       <group position-z={-8} rotation-y={Math.PI / 6}>
@@ -227,8 +254,6 @@ export const Lobby = () => {
           rotation-y={-Math.PI / 8}
         />
       </Suspense>
-
-      
     </group>
   );
 };

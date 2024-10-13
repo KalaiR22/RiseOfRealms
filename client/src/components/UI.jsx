@@ -139,23 +139,23 @@ export const UI = () => {
             }}
           />
         )}
-        <div className="fixed inset-0 flex m-0 w-fit gap-8 py-[15%]  justify-items-start flex-col pointer-events-none select-none ">
+        {/* <div className="fixed inset-0 flex m-0 w-fit gap-8 py-[15%]  justify-items-start flex-col pointer-events-none select-none ">
           <button className="bg-[#D9D9D9] px-3  text-lg font-semibold py-2 text-center">
             SHOP
           </button>
-          <Link to="/marketplace">
+         
             <button className="bg-[#D9D9D9] px-3  text-lg font-semibold py-2 text-center cursor-pointer">
               MARKET PLACE
             </button>
-          </Link>
+          
           <button className="bg-[#D9D9D9] px-3  text-lg font-semibold py-2 text-center">
             SETTINGS
           </button>
           <button className="bg-[#D9D9D9] px-3  text-lg font-semibold py-2 text-center">
             EXIT
           </button>
-        </div>
-        <div className="fixed inset-x-0 inset-y-40 pl-[73%] w-full flex   gap-3  justify-end flex-col pointer-events-none select-none ">
+        </div> */}
+        {/* <div className="fixed inset-x-0 inset-y-40 pl-[73%] w-full flex   gap-3  justify-end flex-col pointer-events-none select-none ">
           <div className="relative w-fit">
             <img src={desc} alt="" className="h-[83px] w-[133px]" />
             <p className="absolute text-base font-semibold  top-0 right-2">
@@ -174,7 +174,7 @@ export const UI = () => {
               POINTS
             </p>
           </div>
-        </div>
+        </div> */}
         <div className="fixed inset-4 flex items-center justify-end flex-col pointer-events-none select-none">
           {roomID && !shopMode && !buildMode && (
             <div className="pointer-events-auto p-4 flex items-center space-x-4">
