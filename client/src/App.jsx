@@ -9,6 +9,9 @@ import MarketPlace from "./pages/MarketPlace";
 import AiAndWorld from "./pages/AiAndWorld";
 import SelectingMap from "./pages/SelectingMap";
 import Inbox from "./pages/Inbox";
+import SelectMode from "./pages/SelectMode";
+import SaleMap from "./pages/SaleMap";
+import Settings from "./pages/Settings";
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
             <Route path="/AIvsWORLD" element={<AiAndWorld />} />
             <Route path="/selectmap" element={<SelectingMap />} />
             <Route path="/inbox" element={<Inbox />} />
+            <Route path="/selectmode" element={<SelectMode />} />
+            <Route path="/salemap" element={<SaleMap />} />
+            <Route path="/settings" element={<Settings />} />
           </Routes>
         </div>
       </Router>

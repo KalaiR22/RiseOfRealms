@@ -5,7 +5,7 @@ import bottom from "../assets/images/bottom.png";
 
 const Inbox = () => {
   return (
-    <div className="bg-black w-full  h-screen p-10 px-60  relative flex flex-col items-center overflow-y-scroll">
+    <div className="bg-black w-full  h-screen p-2  sm:p-10 lg:px-60  relative flex flex-col items-center overflow-y-scroll">
       <div className="pb-10">
         <h1 className="text-center text-white font-semibold text-2xl">
           Inbox
@@ -16,7 +16,7 @@ const Inbox = () => {
         {messages.map((msg) => (
           <div
             key={msg.id}
-            className="flex justify-between items-center p-3  border-b-[1px] border-[#f6f6f629] hover:bg-[#ffffff15] cursor-pointer px-10"
+            className="flex justify-between items-center py-3  border-b-[1px] border-[#f6f6f629] hover:bg-[#ffffff15] cursor-pointer px-2 lg:px-10"
           >
             <div className="flex items-center ">
               <div className="font-semibold text-[#ffffff66]">{msg.name}</div>
