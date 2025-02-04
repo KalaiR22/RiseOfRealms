@@ -2,7 +2,7 @@ import React from "react";
 import { MarketOption } from "../constant";
 import top from "../assets/images/top.png";
 import bottom from "../assets/images/bottom.png";
-import { FaLocationDot } from "react-icons/fa6";
+import { MdLocationPin } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 const MarketPlace = () => {
@@ -36,7 +36,7 @@ const MarketPlace = () => {
         onClick={handleLocationClick}
         className="bg-[#FF0000] text-white font-medium text-xl px-3 py-3 rounded-full w-fit bottom-0 right-0 m-3 fixed cursor-pointer z-50"
       >
-        <FaLocationDot />
+        <MdLocationPin />
       </button>
       {/* Set background images as fixed */}
       <img
